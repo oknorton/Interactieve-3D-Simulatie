@@ -1,27 +1,74 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class PlayerController : MonoBehaviour
 {
     public float speed;
 
+    public float dashDistance;
+    public float dashDuration;
+    public float dashCooldown;
+    private bool isDashing = false;
+    private bool dashOnCooldown = false;
+
+    public Transform shotPoint;
+    public GameObject projectile;
+    public float timeBetweenShots;
+    private float nextShotTime;
+    
     private Vector2 move, mouseLook;
     private Vector3 rotationTarget;
-    
+
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
     }
+
     public void OnMouseLook(InputAction.CallbackContext context)
     {
         mouseLook = context.ReadValue<Vector2>();
     }
-    
+
+    public void OnShiftAbility(InputAction.CallbackContext context)
+    {
+        if (context.started && !isDashing && !dashOnCooldown)
+        {
+            Debug.Log("Dash triggered");
+            StartCoroutine(Dash());
+        }
+    }
+
+    IEnumerator Dash()
+    {
+        isDashing = true;
+        float startTime = Time.time;
+        Vector3 startPos = transform.position;
+        Vector3 endPos = transform.position + transform.forward * dashDistance;
+
+        while (Time.time - startTime < dashDuration)
+        {
+            transform.position = Vector3.Lerp(startPos, endPos, (Time.time - startTime) / dashDuration);
+            yield return null;
+        }
+
+        isDashing = false;
+        StartCoroutine(DashCooldown());
+    }
+
+    IEnumerator DashCooldown()
+    {
+        dashOnCooldown = true;
+        yield return new WaitForSeconds(dashCooldown);
+        dashOnCooldown = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Player Script Initiated");
     }
 
     // Update is called once per frame
@@ -33,19 +80,11 @@ public class PlayerController : MonoBehaviour
         {
             rotationTarget = hit.point;
         }
-        movePlayerWithAim();
-    }
 
-    public void movePLayer()
-    {
-        Vector3 movement = new Vector3(move.x, 0, move.y);
-
-        if (movement != Vector3.zero)
+        if (!isDashing)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15f);
-
+            movePlayerWithAim();
         }
-        transform.Translate(movement * (speed * Time.deltaTime), Space.World);
     }
 
     public void movePlayerWithAim()
