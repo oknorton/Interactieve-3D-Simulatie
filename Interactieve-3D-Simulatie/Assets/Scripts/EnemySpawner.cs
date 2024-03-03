@@ -69,7 +69,7 @@ public class EnemySpawner : HealthSystem
     void SpawnEnemy()
     {
         Vector3 spawnPosition = transform.position + Random.insideUnitSphere * spawnRange;
-        spawnPosition.y = 0; 
+        spawnPosition.y = 1; 
 
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
         currentEnemies++;

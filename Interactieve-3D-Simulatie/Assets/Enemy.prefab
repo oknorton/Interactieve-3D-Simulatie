@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7546544237175502539}
   - component: {fileID: 4994279368826656305}
   - component: {fileID: 4201342198602578004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5971242656249239824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 4726194586028944545}
   - component: {fileID: 5751597789713235962}
   - component: {fileID: 4025940940324357759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -264,6 +264,10 @@ MonoBehaviour:
   detectionRadius: 20
   chaseRadius: 30
   speed: 4
+  shotPoint: {fileID: 5971242656249239824}
+  bulletPrefab: {fileID: 8746578942345408474, guid: da64ddb7efc9fa54dbb69dc9d3264413, type: 3}
+  bulletForce: 30
+  fireRate: 20
 --- !u!54 &4025940940324357759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -273,7 +277,7 @@ Rigidbody:
   m_GameObject: {fileID: 6834468962145280984}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -289,7 +293,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 100
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &8292874281580588405
 GameObject:
@@ -303,7 +307,7 @@ GameObject:
   - component: {fileID: 8909971809773527267}
   - component: {fileID: 506835528721264715}
   - component: {fileID: 3437046818864309874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

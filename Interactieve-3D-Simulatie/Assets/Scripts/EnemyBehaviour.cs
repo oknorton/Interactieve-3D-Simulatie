@@ -3,11 +3,16 @@ using UnityEngine;
 public class EnemyBehaviour : HealthSystem
 {
     public float detectionRadius, chaseRadius, speed;
+    public Transform shotPoint;
+    public GameObject bulletPrefab;
+    public float bulletForce = 4f;
+    private float nextFireTime = 0f;
     private Transform playerTransform;
+    private bool isShooting = false;
 
     new void Start()
     {
-        base.Start(); 
+        base.Start();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -21,6 +26,12 @@ public class EnemyBehaviour : HealthSystem
         if (distanceToPlayer <= detectionRadius)
         {
             MoveTowardsPlayer();
+            if (!isShooting && Time.time >= nextFireTime)
+            {
+                nextFireTime = Time.time + 1f; 
+                Invoke("Shoot", 1f); 
+                isShooting = true;
+            }
         }
         else if (distanceToPlayer > chaseRadius)
         {
@@ -37,5 +48,14 @@ public class EnemyBehaviour : HealthSystem
 
     void StopMoving()
     {
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+    }
+
+    void Shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, shotPoint.position, shotPoint.rotation);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.AddForce(shotPoint.up * bulletForce, ForceMode.Impulse);
+        isShooting = false; 
     }
 }
