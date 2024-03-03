@@ -13,11 +13,6 @@ public class PlayerController : MonoBehaviour
     public float dashCooldown;
     private bool isDashing = false;
     private bool dashOnCooldown = false;
-
-    public Transform shotPoint;
-    public GameObject projectile;
-    public float timeBetweenShots;
-    private float nextShotTime;
     
     private Vector2 move, mouseLook;
     private Vector3 rotationTarget;
@@ -40,6 +35,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
         }
     }
+    
+ 
 
     IEnumerator Dash()
     {
