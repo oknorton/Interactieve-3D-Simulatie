@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int damage = 10; 
     public float destroyDelay = 3f;
 
     void Start()
@@ -11,10 +12,16 @@ public class Bullet : MonoBehaviour
         StartCoroutine(DestroyAfterDelay());
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
         StopCoroutine(DestroyAfterDelay());
         Destroy(gameObject);
+
+        HealthSystem healthSystem = other.gameObject.GetComponent<HealthSystem>();
+        if (healthSystem != null)
+        {
+            healthSystem.TakeDamage(damage);
+        }
     }
 
     IEnumerator DestroyAfterDelay()

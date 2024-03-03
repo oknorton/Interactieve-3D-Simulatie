@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController  : HealthSystem
 {
     public float speed;
 
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         float startTime = Time.time;
         Vector3 startPos = transform.position;
-        Vector3 endPos = transform.position + transform.forward * dashDistance;
+        Vector3 endPos = transform.position + new Vector3(move.x, 0f, move.y).normalized * dashDistance;
 
         while (Time.time - startTime < dashDuration)
         {

@@ -7,13 +7,31 @@ public class Shooting : MonoBehaviour
 {
     public Transform shotPoint;
     public GameObject bulletPrefab;
-
     public float bulletForce = 30f;
-    
+    public float fireRate = 10f; 
+    private float nextFireTime = 0f;
+
+    private bool isShooting = false;
+
     public void OnMouse1(InputAction.CallbackContext context)
     {
-        // context.
-        Shoot();
+        if (context.phase == InputActionPhase.Started)
+        {
+            isShooting = true;
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            isShooting = false;
+        }
+    }
+
+    void Update()
+    {
+        if (isShooting && Time.time >= nextFireTime)
+        {
+            Shoot();
+            nextFireTime = Time.time + 1f / fireRate; 
+        }
     }
 
     void Shoot()
@@ -25,12 +43,5 @@ public class Shooting : MonoBehaviour
 
     public void OnMouse2(InputAction.CallbackContext context)
     {
-       
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
