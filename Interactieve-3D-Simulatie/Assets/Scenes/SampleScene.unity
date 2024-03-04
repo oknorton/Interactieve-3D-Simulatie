@@ -1409,6 +1409,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6504131582729761720, guid: 02bcb2ede3b64ca4dab96de0e90d7f5d, type: 3}
+      propertyPath: spawnRange
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6012348785149077876, guid: 02bcb2ede3b64ca4dab96de0e90d7f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6568413
@@ -1483,7 +1487,7 @@ Transform:
   m_GameObject: {fileID: 1772243051}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51567996, y: -0.5802429, z: 0.8144765}
+  m_LocalPosition: {x: 0, y: -0.5802429, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1661,7 +1665,7 @@ Transform:
   m_GameObject: {fileID: 1861956947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.09, z: -13.58}
+  m_LocalPosition: {x: 0, y: 1.1, z: -13.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1684,8 +1688,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   speed: 8
-  dashDistance: 7
-  dashDuration: 0.2
+  dashDistance: 4.5
+  dashDuration: 0.15
   dashCooldown: 1
 --- !u!114 &1861956953
 MonoBehaviour:
@@ -1822,7 +1826,7 @@ Rigidbody:
   m_GameObject: {fileID: 1861956947}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1838,7 +1842,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 36
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!4 &2004331508 stripped
 Transform:
