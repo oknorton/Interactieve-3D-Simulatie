@@ -8,7 +8,7 @@ public class XRGrabInteractableTwoAttached : XRGrabInteractable
 
     public Transform leftAttachedTransform ;
     public Transform rightAttachedTransform ;
-
+ 
     public override Transform GetAttachTransform(IXRInteractor interactor){
 
         Transform i_attachTransform = null ;
@@ -21,4 +21,5 @@ public class XRGrabInteractableTwoAttached : XRGrabInteractable
         }
         return i_attachTransform != null ? i_attachTransform : base.GetAttachTransform(interactor);
     }
+
 }
