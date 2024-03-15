@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Liquid
-  m_Shader: {fileID: -6465566751694194690, guid: bacfc3b90d17257429514eec1d4ece95,
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -49,6 +49,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -84,6 +88,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Amplitude: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -98,6 +103,9 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _Fill: 0.06
+    - _FoamWidth: 0.04
+    - _Foam_Smoothness: 0
+    - _Frequency: 0.15
     - _FresnelPower: 5
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -108,6 +116,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Rim_Power: 2.12
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -120,14 +129,18 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColor: {r: 0, g: 0.8207547, b: 0.2961154, a: 1}
     - _C1: {r: 1, g: 0, b: 0, a: 1}
     - _C2: {r: 0.57547164, g: 0.06243322, b: 0.06243322, a: 1}
     - _Color: {r: 0.77254903, g: 0.6594721, b: 0.047058806, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.2850213, g: 0.990566, b: 0.7492778, a: 1}
     - _FresnelColor: {r: 0.95283014, g: 0.25950623, b: 0.02247241, a: 1}
     - _Liquid: {r: 0, g: 0, b: 0, a: 0}
+    - _Rim_Color: {r: 0.693879, g: 1, b: 0.32547167, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Surface: {r: 0, g: 0, b: 0, a: 0}
+    - _TopColor: {r: 0, g: 0.6946828, b: 0.764151, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7261089968202958740
 MonoBehaviour:
