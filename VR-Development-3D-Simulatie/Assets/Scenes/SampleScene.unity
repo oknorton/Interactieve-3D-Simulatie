@@ -1279,7 +1279,7 @@ PrefabInstance:
     - target: {fileID: 4047582247873756457, guid: d15417961b1558d41800603ac0bb4f2f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 506.96
+      value: 506.822
       objectReference: {fileID: 0}
     - target: {fileID: 4047582247873756457, guid: d15417961b1558d41800603ac0bb4f2f,
         type: 3}
@@ -2847,47 +2847,47 @@ PrefabInstance:
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.912
+      value: 7.911998
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 506.667
+      value: 506.66684
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5005624
+      value: 0.49966848
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.49590603
+      value: 0.49680674
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5186167
+      value: 0.5177434
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.48430496
+      value: 0.48523825
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.337
+      value: -0.343
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 91.706
+      value: 91.705
       objectReference: {fileID: 0}
     - target: {fileID: 7943950248021246834, guid: c79a351a5d2774041a74a5f9ed8b74d9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 87.762
+      value: 87.968
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3373,14 +3373,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141265884}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0068680397, y: -0, z: -0, w: 0.99997646}
-  m_LocalPosition: {x: 507.791, y: 8.115, z: 506.791}
+  m_LocalRotation: {x: -0.0052083284, y: 0.0000009595743, z: -0.00011266996, w: 0.99998647}
+  m_LocalPosition: {x: 507.0348, y: 8.3572, z: 504.5744}
   m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1533099375}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.787, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.597, y: 0, z: -0.013}
 --- !u!114 &1141265889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3810,6 +3810,7 @@ GameObject:
   - component: {fileID: 1533099378}
   - component: {fileID: 1533099377}
   - component: {fileID: 1533099376}
+  - component: {fileID: 1533099379}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -3905,6 +3906,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533099374}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1533099379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533099374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18117c84f4b9b104d8916034f6d8e08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateMode: 0
+  MaxWobble: 0.03
+  WobbleSpeedMove: 0.5
+  fillAmount: 0.5
+  Recovery: 1
+  Thickness: 0.5
+  CompensateShapeAmount: 0.132
+  mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  rend: {fileID: 1141265886}
 --- !u!1001 &1542066463
 PrefabInstance:
   m_ObjectHideFlags: 0
