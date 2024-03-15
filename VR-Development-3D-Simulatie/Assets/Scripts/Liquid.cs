@@ -34,6 +34,7 @@ public class Liquid : MonoBehaviour
     float sinewave;
     float time = 0.5f;
     Vector3 comp;
+    public float decreaseRate = 0.001f;
 
     // Use this for initialization
     void Start()
@@ -194,4 +195,11 @@ public class Liquid : MonoBehaviour
 
         return lowestVert.y;
     }
+
+    public void DecreaseFillAmount()
+    {
+        fillAmount += decreaseRate * Time.deltaTime;
+        fillAmount = Mathf.Clamp01(fillAmount);
+    }
+
 }
