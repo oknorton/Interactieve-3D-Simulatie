@@ -5,7 +5,10 @@ public class PotionScript : MonoBehaviour
 {
     public XRBaseInteractor socketInteractor;
     public Liquid liquid;
-
+    public ParticleSystem ps;
+    public AudioSource audioSource;
+    public AudioClip uncorkSound;
+    
     private bool isPlugged = true;
 
     void Start()
@@ -17,6 +20,7 @@ public class PotionScript : MonoBehaviour
     private void unplugBottle(SelectExitEventArgs arg0)
     {
         Debug.Log("Bottle unplugged");
+        audioSource.PlayOneShot(uncorkSound);
         isPlugged = false;
     }
 
@@ -30,7 +34,21 @@ public class PotionScript : MonoBehaviour
     {
         if (!isPlugged && IsUpsideDown())
         {
+            if (liquid.fillAmount < 0.6)
+            {
+                ps.Play();
+            } else
+            {
+                ps.Pause();
+                ps.Clear();
+            }
+
             liquid.DecreaseFillAmount();
+        }
+        else
+        {
+            ps.Pause();
+            ps.Clear();
         }
     }
 
