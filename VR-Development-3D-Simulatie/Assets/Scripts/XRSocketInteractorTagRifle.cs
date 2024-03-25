@@ -3,20 +3,40 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRSocketInteractorTagRifle : XRSocketInteractor
 {
-    public string targetTag;
-
-    public override bool CanSelect(XRBaseInteractable interactable)
+    [Header("Filter PARAMS")]
+    [SerializeField] protected bool doFilterByTag = true;
+    [SerializeField] protected string[] filterTags;
+ 
+ 
+    public override bool CanHover(IXRHoverInteractable interactable)
     {
-        if (interactable.CompareTag(targetTag))
+        if (doFilterByTag && interactable is MonoBehaviour gameObject)
         {
-            PotionScript potion = interactable.GetComponent<PotionScript>();
-            if (potion != null && !potion.attachedToGun && !potion.isPlugged)
+            foreach (string filterTag in filterTags)
             {
-                return base.CanSelect(interactable);
+                if (!gameObject.CompareTag(filterTag))
+                {
+                    return false;
+                }
+                
             }
-            return false;
         }
-        return false;
+        return base.CanHover(interactable);
     }
-  
+ 
+    public override bool CanSelect(IXRSelectInteractable interactable)
+    {
+        if (doFilterByTag && interactable is MonoBehaviour gameObject)
+        {
+            foreach (string filterTag in filterTags)
+            {
+                if (!gameObject.CompareTag(filterTag))
+                {
+                    return false;
+                }
+            }
+            
+        }
+        return base.CanSelect(interactable);
+    }
 }

@@ -44,6 +44,7 @@ public class GunFireAR : MonoBehaviour
     }
 
 
+
     private void PotionDetached(SelectExitEventArgs selectExitEventArgs)
     {
         potionScript.attachedToGun = false;

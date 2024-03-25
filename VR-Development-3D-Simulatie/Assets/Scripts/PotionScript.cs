@@ -9,7 +9,8 @@ public class PotionScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip uncorkSound;
 
-    public bool isPlugged { get; set; } = false;
+    public readonly string potionPlugged = "PotionPlugged";
+    public readonly string potion = "Potion";
     public bool attachedToGun { get; set; } = false;
 
     void Start()
@@ -22,18 +23,18 @@ public class PotionScript : MonoBehaviour
     {
         Debug.Log("Bottle unplugged");
         audioSource.PlayOneShot(uncorkSound);
-        isPlugged = false;
+        gameObject.tag = potion;
     }
 
     public void plugBottle(SelectEnterEventArgs arg0)
     {
         Debug.Log("Bottle plugged");
-        isPlugged = true;
+        gameObject.tag = potionPlugged;
     }
 
     void Update()
     {
-        if (!isPlugged && IsUpsideDown() && !attachedToGun)
+        if (IsUpsideDown() && !attachedToGun && CompareTag(potion))
         {
             if (liquid.fillAmount < 0.6)
             {
