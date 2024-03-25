@@ -9,6 +9,7 @@ TagManager:
   - Cork
   - AR-Mag
   - Potion
+  - PotionPlugged
   layers:
   - Default
   - TransparentFX

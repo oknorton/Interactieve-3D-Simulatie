@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Liquid
+  m_Name: Blue Liquid
   m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
     type: 3}
   m_Parent: {fileID: 0}
@@ -43,17 +43,17 @@ Material:
     m_Ints: []
     m_Floats:
     - _Amplitude: 0.22
-    - _FoamWidth: 0.04
+    - _FoamWidth: 0.015
     - _Foam_Smoothness: 0.16
     - _Frequency: 2.43
     - _QueueControl: 1
     - _QueueOffset: 0
     - _Rim_Power: 2
     m_Colors:
-    - _BottomColor: {r: 0.38679248, g: 0, b: 0.0038659845, a: 1}
-    - _FoamColor: {r: 0.6698113, g: 0.041073352, b: 0.041073352, a: 1}
-    - _Rim_Color: {r: 0.8113208, g: 0.13578929, b: 0.019134922, a: 1}
-    - _TopColor: {r: 0.8113208, g: 0.0876746, b: 0.06505875, a: 1}
+    - _BottomColor: {r: 0.011764709, g: 0.047655165, b: 0.20784314, a: 1}
+    - _FoamColor: {r: 0.05006229, g: 0.24723051, b: 0.4245283, a: 1}
+    - _Rim_Color: {r: 0.002669984, g: 0.00658778, b: 0.18867922, a: 1}
+    - _TopColor: {r: 0.07186719, g: 0.16499294, b: 0.8018868, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7261089968202958740
 MonoBehaviour:

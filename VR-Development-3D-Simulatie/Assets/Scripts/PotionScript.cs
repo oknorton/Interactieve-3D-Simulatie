@@ -6,6 +6,7 @@ public class PotionScript : MonoBehaviour
     public XRBaseInteractor socketInteractor;
     public Liquid liquid;
     public ParticleSystem ps;
+    public ParticleSystem.MinMaxGradient startColor;
     public AudioSource audioSource;
     public AudioClip uncorkSound;
 
@@ -13,11 +14,21 @@ public class PotionScript : MonoBehaviour
     public readonly string potion = "Potion";
     public bool attachedToGun { get; set; } = false;
 
+
     void Start()
     {
+        ParticleSystem.MainModule mainModule = ps.main;
+        mainModule.startColor = startColor;
         socketInteractor.selectEntered.AddListener(plugBottle);
         socketInteractor.selectExited.AddListener(unplugBottle);
+        InitializeLiquid();
     }
+
+    void InitializeLiquid()
+    {
+        // liquid = gameObject.AddComponent<Liquid>();
+    }
+
 
     public void unplugBottle(SelectExitEventArgs arg0)
     {
@@ -39,7 +50,8 @@ public class PotionScript : MonoBehaviour
             if (liquid.fillAmount < 0.6)
             {
                 ps.Play();
-            } else
+            }
+            else
             {
                 ps.Pause();
                 ps.Clear();

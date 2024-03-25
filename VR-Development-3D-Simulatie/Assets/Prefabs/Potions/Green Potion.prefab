@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: -8433707260928815791}
   - component: {fileID: -7153568670673353217}
   m_Layer: 7
-  m_Name: Potion Interactable 1
+  m_Name: Green Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 8706075944262847976}
   - component: {fileID: 8822098965522805542}
   m_Layer: 7
-  m_Name: Fluid
+  m_Name: Green Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
