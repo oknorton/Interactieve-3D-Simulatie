@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class GunFireAR : MonoBehaviour
+public class RifleScript : MonoBehaviour
 {
     public GameObject bullet;
     public Transform spawnPoint;
@@ -11,17 +11,16 @@ public class GunFireAR : MonoBehaviour
     public float fireSpeed = 80f;
 
     public XRBaseInteractor socketInteractor;
+    public XRGrabInteractable grabbable;
     public PotionScript potionScript;
 
     private bool firing = false;
 
     void Start()
     {
-        Debug.Log(socketInteractor.gameObject.name);
         socketInteractor.selectEntered.AddListener(PotionAttached);
         socketInteractor.selectExited.AddListener(PotionDetached);
 
-        XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(StartFiring);
         grabbable.deactivated.AddListener(StopFiring);
     }
@@ -54,7 +53,11 @@ public class GunFireAR : MonoBehaviour
     private void StartFiring(ActivateEventArgs arg)
     {
         firing = true;
-        StartCoroutine(FireBullets());
+        if (potionScript != null)
+        {
+            StartCoroutine(FireBullets());
+            
+        }
     }
 
     private void StopFiring(DeactivateEventArgs arg)
@@ -66,6 +69,7 @@ public class GunFireAR : MonoBehaviour
     {
         while (firing)
         {
+            potionScript.DrainLiquid();
             GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
             Rigidbody bulletRigidbody = spawnedBullet.GetComponent<Rigidbody>();
             bulletRigidbody.velocity = spawnPoint.forward * fireSpeed;

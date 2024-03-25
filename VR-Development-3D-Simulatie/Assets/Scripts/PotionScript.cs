@@ -10,6 +10,8 @@ public class PotionScript : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip uncorkSound;
 
+    public float drainRate;
+    
     public readonly string potionPlugged = "PotionPlugged";
     public readonly string potion = "Potion";
     public bool attachedToGun { get; set; } = false;
@@ -66,6 +68,14 @@ public class PotionScript : MonoBehaviour
         }
     }
 
+    public void DrainLiquid(float drainRate)
+    {
+        liquid.DecreaseFillAmount();
+    }
+    public void DrainLiquid()
+    {
+        liquid.DecreaseFillAmount();
+    }
     bool IsUpsideDown()
     {
         return Vector3.Dot(transform.up, Vector3.up) < -0.5f;
