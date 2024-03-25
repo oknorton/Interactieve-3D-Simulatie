@@ -8,6 +8,7 @@ TagManager:
   - Right Hand
   - Cork
   - AR-Mag
+  - Potion
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player
   - Interactable
   - Bullet
-  - 
+  - Component
   - 
   - 
   - 

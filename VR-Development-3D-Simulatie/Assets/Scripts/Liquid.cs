@@ -78,12 +78,10 @@ public class Liquid : MonoBehaviour
 
         if (deltaTime != 0)
         {
-            // decrease wobble over time
             wobbleAmountToAddX = Mathf.Lerp(wobbleAmountToAddX, 0, (deltaTime * Recovery));
             wobbleAmountToAddZ = Mathf.Lerp(wobbleAmountToAddZ, 0, (deltaTime * Recovery));
 
 
-            // make a sine wave of the decreasing wobble
             pulse = 2 * Mathf.PI * WobbleSpeedMove;
             sinewave = Mathf.Lerp(sinewave, Mathf.Sin(pulse * time),
                 deltaTime * Mathf.Clamp(velocity.magnitude + angularVelocity.magnitude, Thickness, 10));
@@ -92,12 +90,10 @@ public class Liquid : MonoBehaviour
             wobbleAmountZ = wobbleAmountToAddZ * sinewave;
 
 
-            // velocity
             velocity = (lastPos - transform.position) / deltaTime;
 
             angularVelocity = GetAngularVelocity(lastRot, transform.rotation);
 
-            // add clamped velocity to wobble
             wobbleAmountToAddX +=
                 Mathf.Clamp((velocity.x + (velocity.y * 0.2f) + angularVelocity.z + angularVelocity.y) * MaxWobble,
                     -MaxWobble, MaxWobble);
@@ -106,14 +102,11 @@ public class Liquid : MonoBehaviour
                     -MaxWobble, MaxWobble);
         }
 
-        // send it to the shader
         rend.sharedMaterial.SetFloat("_WobbleX", wobbleAmountX);
         rend.sharedMaterial.SetFloat("_WobbleZ", wobbleAmountZ);
 
-        // set fill amount
         UpdatePos(deltaTime);
 
-        // keep last position
         lastPos = transform.position;
         lastRot = transform.rotation;
     }
@@ -124,7 +117,6 @@ public class Liquid : MonoBehaviour
             transform.TransformPoint(new Vector3(mesh.bounds.center.x, mesh.bounds.center.y, mesh.bounds.center.z));
         if (CompensateShapeAmount > 0)
         {
-            // only lerp if not paused/normal update
             if (deltaTime != 0)
             {
                 comp = Vector3.Lerp(comp, (worldPos - new Vector3(0, GetLowestPoint(), 0)), deltaTime * 10);
@@ -144,17 +136,12 @@ public class Liquid : MonoBehaviour
         rend.sharedMaterial.SetVector("_FillAmount", pos);
     }
 
-    //https://forum.unity.com/threads/manually-calculate-angular-velocity-of-gameobject.289462/#post-4302796
     Vector3 GetAngularVelocity(Quaternion foreLastFrameRotation, Quaternion lastFrameRotation)
     {
         var q = lastFrameRotation * Quaternion.Inverse(foreLastFrameRotation);
-        // no rotation?
-        // You may want to increase this closer to 1 if you want to handle very small rotations.
-        // Beware, if it is too close to one your answer will be Nan
         if (Mathf.Abs(q.w) > 1023.5f / 1024.0f)
             return Vector3.zero;
         float gain;
-        // handle negatives, we could just flip it but this is faster
         if (q.w < 0.0f)
         {
             var angle = Mathf.Acos(-q.w);

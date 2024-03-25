@@ -8,8 +8,9 @@ public class PotionScript : MonoBehaviour
     public ParticleSystem ps;
     public AudioSource audioSource;
     public AudioClip uncorkSound;
-    
-    private bool isPlugged = true;
+
+    public bool isPlugged { get; set; } = false;
+    public bool attachedToGun { get; set; } = false;
 
     void Start()
     {
@@ -17,14 +18,14 @@ public class PotionScript : MonoBehaviour
         socketInteractor.selectExited.AddListener(unplugBottle);
     }
 
-    private void unplugBottle(SelectExitEventArgs arg0)
+    public void unplugBottle(SelectExitEventArgs arg0)
     {
         Debug.Log("Bottle unplugged");
         audioSource.PlayOneShot(uncorkSound);
         isPlugged = false;
     }
 
-    private void plugBottle(SelectEnterEventArgs arg0)
+    public void plugBottle(SelectEnterEventArgs arg0)
     {
         Debug.Log("Bottle plugged");
         isPlugged = true;
@@ -32,7 +33,7 @@ public class PotionScript : MonoBehaviour
 
     void Update()
     {
-        if (!isPlugged && IsUpsideDown())
+        if (!isPlugged && IsUpsideDown() && !attachedToGun)
         {
             if (liquid.fillAmount < 0.6)
             {
