@@ -53,7 +53,7 @@ public class RifleScript : MonoBehaviour
     private void StartFiring(ActivateEventArgs arg)
     {
         firing = true;
-        if (potionScript != null)
+        if (potionScript !=  null )
         {
             StartCoroutine(FireBullets());
             
@@ -67,7 +67,7 @@ public class RifleScript : MonoBehaviour
 
     IEnumerator FireBullets()
     {
-        while (firing)
+        while (firing && potionScript.liquid.fillAmount <= 0.6)
         {
             potionScript.DrainLiquid();
             GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
