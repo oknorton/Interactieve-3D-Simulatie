@@ -543,6 +543,8 @@ MonoBehaviour:
     m_ColorMax: {r: 1, g: 0, b: 0, a: 1}
   audioSource: {fileID: 4521059671879813205}
   uncorkSound: {fileID: 8300000, guid: aa8d0f4bca2141040bb7bea3aa8f8133, type: 3}
+  potionType: {fileID: 11400000, guid: d8c679f4690a56f4a8e134ee61c6a3b7, type: 2}
+  drainRate: 0
 --- !u!114 &5822950288147129443
 MonoBehaviour:
   m_ObjectHideFlags: 0

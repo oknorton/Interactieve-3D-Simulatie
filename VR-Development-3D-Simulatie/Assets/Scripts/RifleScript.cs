@@ -5,14 +5,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class RifleScript : MonoBehaviour
 {
-    public GameObject bullet;
-    public Transform spawnPoint;
-    public float fireRate = 15f;
-    public float fireSpeed = 80f;
-
     public XRBaseInteractor socketInteractor;
     public XRGrabInteractable grabbable;
     public PotionScript potionScript;
+    public Transform spawnPoint;
 
     private bool firing = false;
 
@@ -42,8 +38,6 @@ public class RifleScript : MonoBehaviour
         }
     }
 
-
-
     private void PotionDetached(SelectExitEventArgs selectExitEventArgs)
     {
         potionScript.attachedToGun = false;
@@ -53,10 +47,9 @@ public class RifleScript : MonoBehaviour
     private void StartFiring(ActivateEventArgs arg)
     {
         firing = true;
-        if (potionScript !=  null )
+        if (potionScript !=  null && potionScript.potionType != null)
         {
             StartCoroutine(FireBullets());
-            
         }
     }
 
@@ -70,11 +63,16 @@ public class RifleScript : MonoBehaviour
         while (firing && potionScript.liquid.fillAmount <= 0.6)
         {
             potionScript.DrainLiquid();
-            GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
+            
+            // Access properties from the PotionType
+            GameObject spawnedBullet = Instantiate(potionScript.potionType.bulletPrefab, 
+                                                   spawnPoint.position, 
+                                                   Quaternion.identity);
             Rigidbody bulletRigidbody = spawnedBullet.GetComponent<Rigidbody>();
-            bulletRigidbody.velocity = spawnPoint.forward * fireSpeed;
+            bulletRigidbody.velocity = spawnPoint.forward * potionScript.potionType.fireSpeed;
+            
             Destroy(spawnedBullet, 5f);
-            yield return new WaitForSeconds(1f / fireRate);
+            yield return new WaitForSeconds(1f / potionScript.potionType.fireRate);
         }
     }
 }
