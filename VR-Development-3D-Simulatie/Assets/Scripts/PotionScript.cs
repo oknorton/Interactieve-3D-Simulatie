@@ -6,6 +6,7 @@ public class PotionScript : MonoBehaviour
 {
     public XRBaseInteractor socketInteractor;
     public Liquid liquid;
+    
     public ParticleSystem ps;
     public ParticleSystem.MinMaxGradient startColor;
     public AudioSource audioSource;
@@ -27,13 +28,9 @@ public class PotionScript : MonoBehaviour
         mainModule.startColor = startColor;
         socketInteractor.selectEntered.AddListener(plugBottle);
         socketInteractor.selectExited.AddListener(unplugBottle);
-        InitializeLiquid();
     }
 
-    void InitializeLiquid()
-    {
-        // liquid = gameObject.AddComponent<Liquid>();
-    }
+  
 
 
     public void unplugBottle(SelectExitEventArgs arg0)

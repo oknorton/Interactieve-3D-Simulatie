@@ -19,8 +19,8 @@ public class Liquid : MonoBehaviour
     [SerializeField] float Recovery = 1f;
     [SerializeField] float Thickness = 1f;
     [Range(0, 1)] public float CompensateShapeAmount;
-    [SerializeField] Mesh mesh;
-    [SerializeField] Renderer rend;
+     Mesh mesh;
+    Renderer rend;
     Vector3 pos;
     Vector3 lastPos;
     Vector3 velocity;
@@ -36,11 +36,20 @@ public class Liquid : MonoBehaviour
     Vector3 comp;
     public float decreaseRate = 0.001f;
 
-    // Use this for initialization
+    Material uniqueMaterial; 
+
     void Start()
     {
         GetMeshAndRend();
+        CreateUniqueMaterial(); 
     }
+
+    void CreateUniqueMaterial()
+    {
+        uniqueMaterial = new Material(rend.sharedMaterial); 
+        rend.material = uniqueMaterial; 
+    }
+
 
     private void OnValidate()
     {
