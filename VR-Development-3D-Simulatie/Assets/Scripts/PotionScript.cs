@@ -12,7 +12,8 @@ public class PotionScript : MonoBehaviour
     public AudioClip uncorkSound;
 
     public PotionType potionType;
-
+    
+    
     public float drainRate;
 
     public readonly string potionPlugged = "PotionPlugged";
