@@ -61,9 +61,9 @@ public class RifleScript : MonoBehaviour
 
    IEnumerator FireBullets()
    {
-       while (firing && potionScript.liquid.fillAmount > 0)
+       while (firing && potionScript.liquid.fillAmount < potionScript.empty)
        {
-           potionScript.DrainLiquid();
+           potionScript.DrainLiquidOnFire();
    
            for (int i = 0; i < potionScript.potionType.numBullets; i++)
            {

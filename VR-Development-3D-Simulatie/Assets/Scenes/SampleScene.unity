@@ -123,6 +123,89 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &2600509
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1116520606966265581, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_HoverSocketSnapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116520606966265581, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131437091131013355, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1854418066}
+    - target: {fileID: 6462745767305767718, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Potion Interactable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 508.60193
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 506.65796
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ce549889f563d44aaf990d18e0ec809, type: 3}
 --- !u!1 &117775106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1263,116 @@ MonoBehaviour:
     m_Reference: {fileID: -1636515391019944688, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!21 &190041439
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blue Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.011764709, g: 0.047655165, b: 0.20784314, a: 1}
+    - _FoamColor: {r: 0.05006229, g: 0.24723051, b: 0.4245283, a: 1}
+    - _Rim_Color: {r: 0.002669984, g: 0.00658778, b: 0.18867922, a: 1}
+    - _TopColor: {r: 0.07186719, g: 0.16499294, b: 0.8018868, a: 1}
+  m_BuildTextureStacks: []
+--- !u!21 &194553899
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blue Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.011764709, g: 0.047655165, b: 0.20784314, a: 1}
+    - _FoamColor: {r: 0.05006229, g: 0.24723051, b: 0.4245283, a: 1}
+    - _Rim_Color: {r: 0.002669984, g: 0.00658778, b: 0.18867922, a: 1}
+    - _TopColor: {r: 0.07186719, g: 0.16499294, b: 0.8018868, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &207958742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1196,7 +1389,7 @@ PrefabInstance:
     - target: {fileID: 8393742495596182532, guid: 2b8ce6cb577a9de4788e429fceb15a42,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 509.445
+      value: 509.943
       objectReference: {fileID: 0}
     - target: {fileID: 8393742495596182532, guid: 2b8ce6cb577a9de4788e429fceb15a42,
         type: 3}
@@ -2848,7 +3041,7 @@ GameObject:
   - component: {fileID: 471926685}
   - component: {fileID: 471926684}
   - component: {fileID: 471926683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3063,7 +3256,7 @@ GameObject:
   - component: {fileID: 514407725}
   - component: {fileID: 514407727}
   - component: {fileID: 514407726}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PotionFeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3139,6 +3332,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514407724}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &515366554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5131437091131013355, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1645099820}
+    - target: {fileID: 6462745767305767718, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Potion Interactable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 509.749
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 506.69424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03a601ec7a9fa3f4e9037d23633db071, type: 3}
 --- !u!114 &548235033 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2769304294310199836, guid: e8d17b8565cdfb24b85be98f9ec412fc,
@@ -3157,6 +3423,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 855027716}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &618391926
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Red Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.4716981, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.32156864, g: 0.01568628, b: 0.02476436, a: 1}
+    - _Rim_Color: {r: 1, g: 0.17692286, b: 0.07075471, a: 1}
+    - _TopColor: {r: 0.8117647, g: 0.074442886, b: 0.06666667, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &622690219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3170,6 +3491,11 @@ PrefabInstance:
       propertyPath: drainRate
       value: 0.0001
       objectReference: {fileID: 0}
+    - target: {fileID: 5131437091131013355, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 190041439}
     - target: {fileID: 6462745767305767718, guid: 03a601ec7a9fa3f4e9037d23633db071,
         type: 3}
       propertyPath: m_Name
@@ -3178,7 +3504,7 @@ PrefabInstance:
     - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 509.10873
+      value: 509.283
       objectReference: {fileID: 0}
     - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
         type: 3}
@@ -3314,6 +3640,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627087652}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &693861960
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Green Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.033433504, g: 0.20754719, b: 0.010768958, a: 1}
+    - _FoamColor: {r: 0.01568628, g: 0.32156864, b: 0.2290743, a: 1}
+    - _Rim_Color: {r: 0.03269147, g: 0.4528302, b: 0.0021359965, a: 1}
+    - _TopColor: {r: 0.18137743, g: 0.8117647, b: 0.06666667, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &740337365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3534,7 +3915,7 @@ PrefabInstance:
     - target: {fileID: 3726089538728456186, guid: e8d17b8565cdfb24b85be98f9ec412fc,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4122122576726464931, guid: e8d17b8565cdfb24b85be98f9ec412fc,
         type: 3}
@@ -3619,7 +4000,7 @@ GameObject:
   - component: {fileID: 1062953542}
   - component: {fileID: 1062953541}
   - component: {fileID: 1062953540}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3714,6 +4095,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062953538}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1076370631
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5131437091131013355, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 194553899}
+    - target: {fileID: 6462745767305767718, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Potion Interactable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 509.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 506.69293
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 03a601ec7a9fa3f4e9037d23633db071,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03a601ec7a9fa3f4e9037d23633db071, type: 3}
 --- !u!1 &1108174092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3930,7 +4384,7 @@ GameObject:
   - component: {fileID: 1114093842}
   - component: {fileID: 1114093841}
   - component: {fileID: 1114093840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4038,6 +4492,11 @@ PrefabInstance:
       propertyPath: drainRate
       value: 0.0005
       objectReference: {fileID: 0}
+    - target: {fileID: 5131437091131013355, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1170533436}
     - target: {fileID: 6462745767305767718, guid: d7533fb9a35dd0b44a600bbc9710b162,
         type: 3}
       propertyPath: m_Name
@@ -4046,7 +4505,7 @@ PrefabInstance:
     - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 509.453
+      value: 509.947
       objectReference: {fileID: 0}
     - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
         type: 3}
@@ -4193,7 +4652,7 @@ GameObject:
   - component: {fileID: 1167934861}
   - component: {fileID: 1167934860}
   - component: {fileID: 1167934859}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4288,6 +4747,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167934857}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1170533436
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Red Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.4716981, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.32156864, g: 0.01568628, b: 0.02476436, a: 1}
+    - _Rim_Color: {r: 1, g: 0.17692286, b: 0.07075471, a: 1}
+    - _TopColor: {r: 0.8117647, g: 0.074442886, b: 0.06666667, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &1173239201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4566,6 +5080,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257568363}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1451260571
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Red Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.4716981, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.32156864, g: 0.01568628, b: 0.02476436, a: 1}
+    - _Rim_Color: {r: 1, g: 0.17692286, b: 0.07075471, a: 1}
+    - _TopColor: {r: 0.8117647, g: 0.074442886, b: 0.06666667, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1469468788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +5146,7 @@ GameObject:
   - component: {fileID: 1469468789}
   - component: {fileID: 1469468791}
   - component: {fileID: 1469468790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5111,12 +5680,329 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+--- !u!21 &1645099820
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blue Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.011764709, g: 0.047655165, b: 0.20784314, a: 1}
+    - _FoamColor: {r: 0.05006229, g: 0.24723051, b: 0.4245283, a: 1}
+    - _Rim_Color: {r: 0.002669984, g: 0.00658778, b: 0.18867922, a: 1}
+    - _TopColor: {r: 0.07186719, g: 0.16499294, b: 0.8018868, a: 1}
+  m_BuildTextureStacks: []
+--- !u!1001 &1729181175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5131437091131013355, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1451260571}
+    - target: {fileID: 6462745767305767718, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Potion Interactable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 510.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 506.68936
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7533fb9a35dd0b44a600bbc9710b162, type: 3}
 --- !u!4 &1785469420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4047582247873756457, guid: d15417961b1558d41800603ac0bb4f2f,
     type: 3}
   m_PrefabInstance: {fileID: 2025773279}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1854418066
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Green Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.033433504, g: 0.20754719, b: 0.010768958, a: 1}
+    - _FoamColor: {r: 0.01568628, g: 0.32156864, b: 0.2290743, a: 1}
+    - _Rim_Color: {r: 0.03269147, g: 0.4528302, b: 0.0021359965, a: 1}
+    - _TopColor: {r: 0.18137743, g: 0.8117647, b: 0.06666667, a: 1}
+  m_BuildTextureStacks: []
+--- !u!1001 &1870234910
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2617422001836905344, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: potionType
+      value: 
+      objectReference: {fileID: 11400000, guid: adca1f67396b8e8459035c7aa153cc74,
+        type: 2}
+    - target: {fileID: 5131437091131013355, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 693861960}
+    - target: {fileID: 6462745767305767718, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_Name
+      value: Green Potion Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 509.0472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 506.6683
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ce549889f563d44aaf990d18e0ec809, type: 3}
+--- !u!21 &1882719514
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Green Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: d04c0eae07817f645bdd64291c1f2221,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Main_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Amplitude: 0.22
+    - _FoamWidth: 0.015
+    - _Foam_Smoothness: 0.16
+    - _Frequency: 2.43
+    - _QueueControl: 1
+    - _QueueOffset: 0
+    - _Rim_Power: 2
+    m_Colors:
+    - _BottomColor: {r: 0.033433504, g: 0.20754719, b: 0.010768958, a: 1}
+    - _FoamColor: {r: 0.01568628, g: 0.32156864, b: 0.2290743, a: 1}
+    - _Rim_Color: {r: 0.03269147, g: 0.4528302, b: 0.0021359965, a: 1}
+    - _TopColor: {r: 0.18137743, g: 0.8117647, b: 0.06666667, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1907750942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5603,7 +6489,7 @@ PrefabInstance:
     - target: {fileID: 8393742495596182532, guid: 2b8ce6cb577a9de4788e429fceb15a42,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 509.1244
+      value: 509.284
       objectReference: {fileID: 0}
     - target: {fileID: 8393742495596182532, guid: 2b8ce6cb577a9de4788e429fceb15a42,
         type: 3}
@@ -5655,6 +6541,84 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b8ce6cb577a9de4788e429fceb15a42, type: 3}
+--- !u!1001 &2101548217
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5131437091131013355, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 618391926}
+    - target: {fileID: 6462745767305767718, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Potion Interactable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 510.40588
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.026
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 506.627
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234730952180544034, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561293966350299238, guid: d7533fb9a35dd0b44a600bbc9710b162,
+        type: 3}
+      propertyPath: fillAmount
+      value: 0.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7533fb9a35dd0b44a600bbc9710b162, type: 3}
 --- !u!1 &2110877334
 GameObject:
   m_ObjectHideFlags: 0
@@ -6435,6 +7399,11 @@ PrefabInstance:
       propertyPath: initialFillAmount
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5131437091131013355, guid: 7ce549889f563d44aaf990d18e0ec809,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1882719514}
     - target: {fileID: 6462745767305767718, guid: 7ce549889f563d44aaf990d18e0ec809,
         type: 3}
       propertyPath: m_Name
@@ -6514,3 +7483,9 @@ SceneRoots:
   - {fileID: 855027716}
   - {fileID: 622690219}
   - {fileID: 1114099924}
+  - {fileID: 1729181175}
+  - {fileID: 2101548217}
+  - {fileID: 1076370631}
+  - {fileID: 515366554}
+  - {fileID: 1870234910}
+  - {fileID: 2600509}

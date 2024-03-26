@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DefaultNamespace
 {
@@ -17,6 +18,7 @@ namespace DefaultNamespace
         public GameObject bulletPrefab;     // The bullet GameObject fired by this potion type
         public float fireRate = 15f;        // The rate at which the potion can fire bullets (bullets per second)
         public float fireSpeed = 80f;       // The speed of the bullets fired by the potion
+        public float fireDrainRate = 0.09f;       // The speed of the bullets fired by the potion
         public BulletPattern bulletPattern; // The pattern of bullet firing
 
         // Additional properties for specific patterns

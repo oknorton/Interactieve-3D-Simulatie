@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c4339f9b8df69bc49abc09e258be111f, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,12 +131,10 @@ MonoBehaviour:
   updateMode: 0
   MaxWobble: 0.004
   WobbleSpeedMove: 0.85
-  fillAmount: 0.3
+  fillAmount: 0.38
   Recovery: 1
   Thickness: 1
   CompensateShapeAmount: 0.011
-  mesh: {fileID: 212370497460711607, guid: 53a98eddb1e468c4bade130870c454ab, type: 3}
-  rend: {fileID: 5131437091131013355}
   decreaseRate: 0.09
 --- !u!1 &5506572845270176897
 GameObject:
@@ -237,7 +235,7 @@ GameObject:
   - component: {fileID: 5822950288147129443}
   - component: {fileID: 4521059671879813205}
   m_Layer: 7
-  m_Name: Green Potion Interactable
+  m_Name: Ice Potion
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,9 +538,12 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     m_ColorMin: {r: 0, g: 0, b: 0, a: 0}
-    m_ColorMax: {r: 0.18212414, g: 1, b: 0, a: 1}
+    m_ColorMax: {r: 0, g: 0.30203557, b: 1, a: 1}
   audioSource: {fileID: 4521059671879813205}
   uncorkSound: {fileID: 8300000, guid: aa8d0f4bca2141040bb7bea3aa8f8133, type: 3}
+  potionType: {fileID: 11400000, guid: bb78e8bb9d6512d4b819e05daf4dfcdc, type: 2}
+  drainRate: 0
+  empty: 0.61
 --- !u!114 &5822950288147129443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +757,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
+  m_ShowInteractableHoverMeshes: 0
   m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1

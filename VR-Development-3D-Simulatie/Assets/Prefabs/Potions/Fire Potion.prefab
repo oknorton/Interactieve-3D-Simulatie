@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf5d3da953657c14db7772d3a51f0fe5, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,8 +135,6 @@ MonoBehaviour:
   Recovery: 1
   Thickness: 1
   CompensateShapeAmount: 0.011
-  mesh: {fileID: 212370497460711607, guid: 53a98eddb1e468c4bade130870c454ab, type: 3}
-  rend: {fileID: 5131437091131013355}
   decreaseRate: 0.09
 --- !u!1 &5506572845270176897
 GameObject:
@@ -237,7 +235,7 @@ GameObject:
   - component: {fileID: 5822950288147129443}
   - component: {fileID: 4521059671879813205}
   m_Layer: 7
-  m_Name: Red Potion Interactable
+  m_Name: Fire Potion
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,6 +543,7 @@ MonoBehaviour:
   uncorkSound: {fileID: 8300000, guid: aa8d0f4bca2141040bb7bea3aa8f8133, type: 3}
   potionType: {fileID: 11400000, guid: d8c679f4690a56f4a8e134ee61c6a3b7, type: 2}
   drainRate: 0
+  empty: 0.61
 --- !u!114 &5822950288147129443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,7 +757,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
+  m_ShowInteractableHoverMeshes: 0
   m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1

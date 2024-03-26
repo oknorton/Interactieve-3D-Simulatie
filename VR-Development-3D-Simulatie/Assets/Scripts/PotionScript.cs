@@ -20,6 +20,7 @@ public class PotionScript : MonoBehaviour
     public readonly string potionPlugged = "PotionPlugged";
     public readonly string potion = "Potion";
     public bool attachedToGun { get; set; } = false;
+    public float empty = 0.61f;
 
 
     void Start()
@@ -60,7 +61,7 @@ public class PotionScript : MonoBehaviour
                 ps.Clear();
             }
 
-            liquid.DecreaseFillAmount();
+            DrainLiquidOnEmpty(0.11f);
         }
         else
         {
@@ -69,14 +70,14 @@ public class PotionScript : MonoBehaviour
         }
     }
 
-    public void DrainLiquid(float drainRate)
+    public void DrainLiquidOnEmpty(float drainRate)
     {
-        liquid.DecreaseFillAmount();
+        liquid.DecreaseFillAmount(drainRate);
     }
 
-    public void DrainLiquid()
+    public void DrainLiquidOnFire()
     {
-        liquid.DecreaseFillAmount();
+        liquid.DecreaseFillAmount(potionType.fireDrainRate);
     }
 
     bool IsUpsideDown()

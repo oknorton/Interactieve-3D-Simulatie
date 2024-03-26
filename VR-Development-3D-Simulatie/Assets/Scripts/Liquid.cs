@@ -34,7 +34,7 @@ public class Liquid : MonoBehaviour
     float sinewave;
     float time = 0.5f;
     Vector3 comp;
-    public float decreaseRate = 0.001f;
+    public float decreaseRate = 0.09f;
 
     Material uniqueMaterial; 
 
@@ -197,5 +197,9 @@ public class Liquid : MonoBehaviour
         fillAmount += decreaseRate * Time.deltaTime;
         fillAmount = Mathf.Clamp01(fillAmount);
     }
-
+    public void DecreaseFillAmount(float drainValue)
+    {
+        fillAmount += drainValue * Time.deltaTime;
+        fillAmount = Mathf.Clamp01(fillAmount);
+    }
 }

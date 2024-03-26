@@ -16,3 +16,8 @@ MonoBehaviour:
     type: 3}
   fireRate: 2
   fireSpeed: 80
+  fireDrainRate: 0.5
+  bulletPattern: 0
+  numBullets: 1
+  spreadAngle: 15
+  burstInterval: 0.1
