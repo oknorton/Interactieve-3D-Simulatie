@@ -1,4 +1,5 @@
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -58,21 +59,33 @@ public class RifleScript : MonoBehaviour
         firing = false;
     }
 
-    IEnumerator FireBullets()
-    {
-        while (firing && potionScript.liquid.fillAmount <= 0.6)
-        {
-            potionScript.DrainLiquid();
-            
-            // Access properties from the PotionType
-            GameObject spawnedBullet = Instantiate(potionScript.potionType.bulletPrefab, 
-                                                   spawnPoint.position, 
-                                                   Quaternion.identity);
-            Rigidbody bulletRigidbody = spawnedBullet.GetComponent<Rigidbody>();
-            bulletRigidbody.velocity = spawnPoint.forward * potionScript.potionType.fireSpeed;
-            
-            Destroy(spawnedBullet, 5f);
-            yield return new WaitForSeconds(1f / potionScript.potionType.fireRate);
-        }
-    }
+   IEnumerator FireBullets()
+   {
+       while (firing && potionScript.liquid.fillAmount > 0)
+       {
+           potionScript.DrainLiquid();
+   
+           for (int i = 0; i < potionScript.potionType.numBullets; i++)
+           {
+               Vector3 direction = spawnPoint.forward;
+               if (potionScript.potionType.bulletPattern == BulletPattern.Shotgun)
+               {
+                   direction = Quaternion.Euler(0, Random.Range(-potionScript.potionType.spreadAngle / 2f, potionScript.potionType.spreadAngle / 2f), 0) * direction;
+               }
+   
+               GameObject spawnedBullet = Instantiate(potionScript.potionType.bulletPrefab, spawnPoint.position, Quaternion.identity);
+               Rigidbody bulletRigidbody = spawnedBullet.GetComponent<Rigidbody>();
+               bulletRigidbody.velocity = direction * potionScript.potionType.fireSpeed;
+   
+               Destroy(spawnedBullet, 5f);
+           }
+   
+           yield return new WaitForSeconds(1f / potionScript.potionType.fireRate);
+   
+           if (potionScript.potionType.bulletPattern == BulletPattern.Burst && potionScript.potionType.numBullets > 1)
+           {
+               yield return new WaitForSeconds(potionScript.potionType.burstInterval);
+           }
+       }
+   }
 }
